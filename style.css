@@ -1,0 +1,264 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* cor amarela usada no site: #ffe600 */
+
+section {
+    padding: 80px 10%;
+}
+
+.titulo {
+    font-size: 36px;
+    color: #ffe600;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #ffe600;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #111111;
+    border-bottom: 2px solid #ffe600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #ffe600;
+    font-size: 24px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ffe600;
+}
+
+/* ===== APRESENTAÇÃO ===== */
+.apresentacao {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #000000 60%, #3d3500 100%);
+}
+
+.ola {
+    color: #ffe600;
+    font-size: 20px;
+}
+
+.apresentacao h2 {
+    font-size: 64px;
+    margin: 10px 0;
+}
+
+.apresentacao h3 {
+    font-size: 26px;
+    color: #cccccc;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.resumo {
+    max-width: 550px;
+    margin-bottom: 30px;
+    color: #dddddd;
+}
+
+.botao {
+    background-color: #ffe600;
+    color: #000000;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.botao:hover {
+    background-color: #ffffff;
+}
+
+/* ===== SOBRE ===== */
+.sobre-conteudo {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.foto {
+    width: 280px;
+    height: 280px;
+    flex-shrink: 0;
+    background-color: #222222;
+    border: 3px solid #ffe600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999999;
+    text-align: center;
+}
+
+.texto p {
+    margin-bottom: 15px;
+    max-width: 600px;
+}
+
+/* ===== HABILIDADES ===== */
+#habilidades {
+    background-color: #111111;
+}
+
+.lista-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.habilidade {
+    border: 2px solid #ffe600;
+    color: #ffe600;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.habilidade:hover {
+    background-color: #ffe600;
+    color: #000000;
+}
+
+/* ===== PROJETOS ===== */
+.lista-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projeto {
+    background-color: #1a1a1a;
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid #ffe600;
+}
+
+.imagem-projeto {
+    height: 160px;
+    background-color: #333333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999999;
+}
+
+.projeto h3 {
+    color: #ffe600;
+    margin-bottom: 10px;
+}
+
+.projeto p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.link-projeto {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.link-projeto:hover {
+    color: #ffe600;
+}
+
+/* ===== CONTATO ===== */
+#contato {
+    background-color: #111111;
+    text-align: center;
+}
+
+.texto-contato {
+    margin-bottom: 25px;
+}
+
+.lista-contato {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.lista-contato a {
+    color: #000000;
+    background-color: #ffe600;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.lista-contato a:hover {
+    background-color: #ffffff;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    border-top: 2px solid #ffe600;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .apresentacao h2 {
+        font-size: 40px;
+    }
+
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+
+    .projeto {
+        width: 100%;
+    }
+}
