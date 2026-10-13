@@ -3,14 +3,8 @@
 **Nome completo:** Seu Nome Completo
 **Turma:** Sua turma
 
-**Site publicado:** https://SEU-USUARIO.github.io/portfolio/
-**Repositório:** https://github.com/SEU-USUARIO/portfolio
-
-## Prints
-
-| Desktop | Mobile |
-|---|---|
-| ![Desktop](img/print-desktop.png) | ![Mobile](img/print-mobile.png) |
+**Site publicado**:https://github.com/Joao-Vitor-Bonifacio/portfolio_pessoal.git
+**Repositório:** https://github.com/Joao-Vitor-Bonifacio/portfolio_pessoal
 
 ## Onde usei Grid
 
@@ -32,4 +26,4 @@ Breakpoints em 900px (tablet) e 600px (celular).
 
 ## Uso de Inteligência Artificial
 
-Declaro que usei ferramenta de IA como apoio para <descreva: tirar dúvidas, revisar, gerar a estrutura inicial...>. Sei explicar qualquer trecho do código.
+Declaro que usei ferramenta de IA como apoio.
