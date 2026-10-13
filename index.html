@@ -1,117 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Análise e Desenvolvimento de Sistemas</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>João Vitor Bonifácio de Paulo | Portfólio</title>
+  <meta name="description" content="Portfólio pessoal de João Vitor Bonifácio de Paulo, profissional de tecnologia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <h1 class="logo">&lt;SeuNome/&gt;</h1>
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+  <!-- Cabeçalho + menu (Flexbox) -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Menu principal">
+      <a class="logo" href="#sobre"><span class="logo-nome">João Vitor Bonifácio de Paulo</span></a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- APRESENTAÇÃO -->
-    <section id="inicio" class="apresentacao">
-        <p class="ola">Olá, eu sou</p>
-        <h2>Seu Nome Completo</h2>
-        <h3>Estudante de Análise e Desenvolvimento de Sistemas</h3>
-        <p class="resumo">
-            Gosto de transformar ideias em sistemas que funcionam.
-            Estou em busca da minha primeira oportunidade na área de tecnologia.
-        </p>
-        <a href="#projetos" class="botao">Ver meus projetos</a>
+  <main>
+
+    <!-- Sobre mim (Grid com grid-template-areas) -->
+    <section id="sobre" class="sobre">
+      <div class="sobre-grid">
+        <img class="sobre-foto" src="img/foto-perfil.jpg" alt="Foto de perfil de Seu Nome sorrindo, em fundo azul">
+        <h1 class="sobre-titulo">Olá, eu sou João Vitor Bonifácio de Paulo.</h1>
+        <p class="sobre-area">Desenvolvimento web &middot; Front-end</p>
+        <p class="sobre-texto">Estudante de tecnologia apaixonado por transformar ideias em interfaces claras e acessíveis. Gosto de aprender fazendo: cada projeto abaixo ensinou algo novo sobre HTML, CSS e organização de código.</p>
+      </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre">
-        <h2 class="titulo">Sobre mim</h2>
-        <div class="sobre-conteudo">
-            <div class="foto">Sua foto aqui</div>
-            <div class="texto">
-                <p>
-                    Sou estudante do curso de Análise e Desenvolvimento de Sistemas
-                    na Nome da Faculdade, com previsão de formatura em 2027.
-                </p>
-                <p>
-                    Já criei sites, pequenos sistemas e bancos de dados durante
-                    o curso. Gosto de aprender coisas novas e de trabalhar em equipe.
-                </p>
-                <p>
-                    Nas horas livres eu estudo programação, assisto vídeos de
-                    tecnologia e jogo videogame.
-                </p>
-            </div>
-        </div>
+    <!-- Habilidades (Grid) -->
+    <section id="habilidades" class="secao">
+      <h2>Habilidades</h2>
+      <div class="habilidades-grid">
+        <article class="habilidade">
+          <h3>Linguagens</h3>
+          <ul class="tags"><li>HTML5</li><li>CSS3</li>
+        </article>
+        <article class="habilidade">
+          <h3>Ferramentas</h3>
+          <ul class="tags"><li>Git</li><li>GitHub</li><li>VS Code</li></ul>
+        </article>
+        <article class="habilidade">
+          <h3>Design</h3>
+          <ul class="tags"><li>Figma</li><li>Layout responsivo</li><li>Acessibilidade</li></ul>
+        </article>
+        <article class="habilidade">
+          <h3>Competências</h3>
+          <ul class="tags"><li>Trabalho em equipe</li><li>Comunicação</li><li>Resolução de problemas</li></ul>
+        </article>
+      </div>
     </section>
 
-    <!-- HABILIDADES -->
-    <section id="habilidades">
-        <h2 class="titulo">Habilidades</h2>
-        <div class="lista-habilidades">
-            <div class="habilidade">HTML</div>
-            <div class="habilidade">CSS</div>
-            <div class="habilidade">JavaScript</div>
-            <div class="habilidade">Python</div>
-            <div class="habilidade">Java</div>
-            <div class="habilidade">SQL</div>
-            <div class="habilidade">Git e GitHub</div>
-            <div class="habilidade">Lógica de Programação</div>
-        </div>
+    <!-- Projetos (Grid: repeat + fr + gap) -->
+    <section id="projetos" class="secao">
+      <h2>Projetos</h2>
+      <div class="projetos-grid">
+        <article class="card">
+          <img src="img/projeto-1.jpg" alt="Captura de tela do projeto Lista de Tarefas">
+          <h3>Restaurante</h3>
+          <p>Aplicação simples para um restaurante, feita com HTML, CSS</p>
+          <a class="botao" href="https://github.com/facsenac-contagem-front-end/atividade-01-pagina-restaurante.git">Ver projeto</a>
+      </div>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos">
-        <h2 class="titulo">Projetos</h2>
-        <div class="lista-projetos">
-
-            <div class="projeto">
-                <div class="imagem-projeto">Imagem do projeto</div>
-                <h3>Sistema de Cadastro de Clientes</h3>
-                <p>Sistema feito em Java com banco de dados MySQL para cadastrar, editar e excluir clientes.</p>
-                <a href="#" class="link-projeto">Ver no GitHub</a>
-            </div>
-
-            <div class="projeto">
-                <div class="imagem-projeto">Imagem do projeto</div>
-                <h3>Site de uma Loja Virtual</h3>
-                <p>Site feito com HTML, CSS e JavaScript, com lista de produtos e carrinho de compras.</p>
-                <a href="#" class="link-projeto">Ver no GitHub</a>
-            </div>
-
-            <div class="projeto">
-                <div class="imagem-projeto">Imagem do projeto</div>
-                <h3>Lista de Tarefas</h3>
-                <p>Aplicativo em Python para organizar tarefas do dia a dia, feito como trabalho da faculdade.</p>
-                <a href="#" class="link-projeto">Ver no GitHub</a>
-            </div>
-
-        </div>
+    <!-- Formação e experiência (Grid) -->
+    <section id="formacao" class="secao">
+      <h2>Formação e experiência</h2>
+      <div class="formacao-grid">
+        <article class="item-formacao">
+          <h3>Formação acadêmica</h3>
+          <p><strong>Curso de Tecnologia</strong><br>Senac em andamento; 2025 a 2027</p>
+        </article>
+        <article class="item-formacao">
+          <h3>Cursos</h3>
+          <p><strong>Curso técnico de informática </strong><br>Senac 2022-2023</p>
+        </article>
+        <article class="item-formacao">
+          <h3>Experiência</h3>
+          <p><strong>Em busca de estágio</strong><br></p>
+        </article>
+      </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato">
-        <h2 class="titulo">Contato</h2>
-        <p class="texto-contato">Vamos conversar? Me chame por um dos canais abaixo.</p>
-        <div class="lista-contato">
-            <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-        </div>
+    <!-- Contato (Flexbox) -->
+    <section id="contato" class="secao">
+      <h2>Contato</h2>
+      <div class="contato-links">
+        <a class="botao" href="mailto:joaoboni2003@hotmail.com">E-mail</a>
+        <a class="botao" href="https://www.linkedin.com/in/jvbdp/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="botao" href="https://github.com/Joao-Vitor-Bonifacio" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </section>
 
-    <!-- RODAPÉ -->
-    <footer>
-        <p>&copy; 2026 Seu Nome. Todos os direitos reservados.</p>
-    </footer>
+  </main>
+
+  <!-- Rodapé (Flexbox) -->
+  <footer class="site-footer">
+    <p>&copy; 2026 João Vitor Bonifácio de Paulo. Todos os direitos reservados.</p>
+    <ul class="footer-links">
+      <li><a href="#sobre">Topo</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </footer>
 
 </body>
 </html>

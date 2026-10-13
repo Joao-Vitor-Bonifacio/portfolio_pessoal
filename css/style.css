@@ -1,0 +1,257 @@
+/* ==========================================================
+   VARIÁVEIS
+   ========================================================== */
+:root {
+  --cor-fundo: #f6f5f1;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1b1f2a;
+  --cor-texto-suave: #5a6072;
+  --cor-destaque: #2f3fd8;
+  --cor-destaque-escuro: #222fa8;
+  --cor-borda: #dcdbd3;
+
+  --fonte-titulo: "Bricolage Grotesque", system-ui, sans-serif;
+  --fonte-texto: "Figtree", system-ui, sans-serif;
+
+  --espaco: 1.5rem;
+  --raio: 10px;
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+a { color: inherit; }
+
+h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.15; }
+h2 { font-size: 2rem; margin-bottom: var(--espaco); }
+h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+
+a:focus-visible { outline: 3px solid var(--cor-destaque); outline-offset: 3px; }
+
+/* ==========================================================
+   CABEÇALHO E MENU (Flexbox)
+   ========================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--cor-fundo);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.9rem var(--espaco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.logo-nome { font-weight: 500; color: var(--cor-texto-suave); }
+
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a { text-decoration: none; font-weight: 500; }
+.nav-links a:hover { color: var(--cor-destaque); }
+
+/* ==========================================================
+   LAYOUT GERAL DAS SEÇÕES
+   ========================================================== */
+.secao,
+.sobre {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem var(--espaco);
+}
+
+/* ==========================================================
+   SOBRE MIM (Grid com grid-template-areas)
+   ========================================================== */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  grid-template-areas:
+    "foto titulo"
+    "foto area"
+    "foto texto";
+  grid-template-rows: auto auto 1fr;
+  column-gap: 3rem;
+  row-gap: 1rem;
+  align-items: start;
+}
+
+.sobre-foto {
+  grid-area: foto;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--raio);
+}
+.sobre-titulo { grid-area: titulo; font-size: clamp(2.2rem, 5vw, 3.6rem); align-self: end; }
+.sobre-area { grid-area: area; color: var(--cor-destaque); font-weight: 600; }
+.sobre-texto { grid-area: texto; max-width: 60ch; color: var(--cor-texto-suave); font-size: 1.1rem; }
+
+/* ==========================================================
+   HABILIDADES (Grid)
+   ========================================================== */
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espaco);
+}
+
+.habilidade {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 1.25rem;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tags li {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: #e8eafb;
+  color: var(--cor-destaque-escuro);
+}
+
+/* ==========================================================
+   PROJETOS (Grid: repeat() + fr + gap)
+   ========================================================== */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espaco);
+}
+
+/* Card: alinhamento interno com Flexbox */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+.card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.card h3 { padding: 1rem 1rem 0; }
+.card p { padding: 0 1rem; color: var(--cor-texto-suave); font-size: 0.95rem; }
+.card .botao { margin: auto 1rem 1rem; } /* empurra o botão para o fim do card */
+.card p { margin-bottom: 1rem; }
+
+/* ==========================================================
+   FORMAÇÃO E EXPERIÊNCIA (Grid)
+   ========================================================== */
+.formacao-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espaco);
+}
+.item-formacao {
+  padding-left: 1rem;
+  border-left: 4px solid var(--cor-destaque);
+}
+
+/* ==========================================================
+   CONTATO (Flexbox)
+   ========================================================== */
+.contato-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ==========================================================
+   BOTÃO
+   ========================================================== */
+.botao {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--raio);
+  background: var(--cor-destaque);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.botao:hover { background: var(--cor-destaque-escuro); }
+
+/* ==========================================================
+   RODAPÉ (Flexbox)
+   ========================================================== */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem var(--espaco);
+  background: var(--cor-texto);
+  color: #e6e6ea;
+  font-size: 0.95rem;
+}
+.footer-links { display: flex; gap: 1.25rem; }
+.footer-links a { text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; }
+
+/* ==========================================================
+   RESPONSIVIDADE: tablet (até 900px)
+   ========================================================== */
+@media (max-width: 900px) {
+  .habilidades-grid,
+  .projetos-grid { grid-template-columns: repeat(2, 1fr); }
+  .formacao-grid { grid-template-columns: 1fr; }
+  .logo-nome { display: none; }
+}
+
+/* ==========================================================
+   RESPONSIVIDADE: celular (até 600px)
+   ========================================================== */
+@media (max-width: 600px) {
+  .nav { flex-direction: column; }
+  .nav-links { flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.1rem; }
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "foto"
+      "titulo"
+      "area"
+      "texto";
+  }
+  .sobre-foto { max-width: 260px; }
+
+  .habilidades-grid,
+  .projetos-grid { grid-template-columns: 1fr; }
+
+  .contato-links { flex-direction: column; }
+  .site-footer { flex-direction: column; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
