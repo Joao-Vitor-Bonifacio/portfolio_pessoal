@@ -2,13 +2,13 @@
    VARIÁVEIS
    ========================================================== */
 :root {
-  --cor-fundo: #f6f5f1;
+  --cor-fundo: #f4f7f5;
   --cor-superficie: #ffffff;
-  --cor-texto: #1b1f2a;
-  --cor-texto-suave: #5a6072;
-  --cor-destaque: #2f3fd8;
-  --cor-destaque-escuro: #222fa8;
-  --cor-borda: #dcdbd3;
+  --cor-texto: #12251f;
+  --cor-texto-suave: #4f6159;
+  --cor-destaque: #0b7a60;
+  --cor-destaque-escuro: #085c49;
+  --cor-borda: #d3ddd8;
 
   --fonte-titulo: "Bricolage Grotesque", system-ui, sans-serif;
   --fonte-texto: "Figtree", system-ui, sans-serif;
@@ -134,7 +134,7 @@ a:focus-visible { outline: 3px solid var(--cor-destaque); outline-offset: 3px; }
   font-size: 0.9rem;
   padding: 0.2rem 0.7rem;
   border-radius: 999px;
-  background: #e8eafb;
+  background: #dff3ec;
   color: var(--cor-destaque-escuro);
 }
 
@@ -211,7 +211,7 @@ a:focus-visible { outline: 3px solid var(--cor-destaque); outline-offset: 3px; }
   gap: 1rem;
   padding: 1.5rem var(--espaco);
   background: var(--cor-texto);
-  color: #e6e6ea;
+  color: #e3efe9;
   font-size: 0.95rem;
 }
 .footer-links { display: flex; gap: 1.25rem; }
