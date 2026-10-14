@@ -1,7 +1,7 @@
 # Portfólio pessoal
 
-**Nome completo:** Seu Nome Completo
-**Turma:** Sua turma
+**Nome completo:** João Vitor Bonifácio de Paulo  
+**Turma:** 0165
 
 **Site publicado**:https://github.com/Joao-Vitor-Bonifacio/portfolio_pessoal.git
 **Repositório:** https://github.com/Joao-Vitor-Bonifacio/portfolio_pessoal
